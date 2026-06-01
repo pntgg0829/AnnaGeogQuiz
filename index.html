@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Natural Hazards Quiz</title>
+<title>Geography Quiz</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif}
 body{background:#f4f6f8;padding:20px;max-width:900px;margin:0 auto}
@@ -56,81 +56,76 @@ body{background:#f4f6f8;padding:20px;max-width:900px;margin:0 auto}
 
 <script>
 const unitData = [
-  // Unit 1
   [
     {unit:"Unit 1",q:"Which of the following are natural hazards?",s:["1 Drought in California that resulted in the loss of crops","2 Earthquake in New Zealand that damaged buildings","3 Industrial fire in Hong Kong that caused deaths"],options:["1 and 2 only","1 and 3 only","2 and 3 only","1, 2 and 3"],answer:0,explain:"Industrial fire is human-made."},
     {unit:"Unit 1",q:"Which of the following is most likely to be a natural hazard?",options:["A wildfire that occurred in the countryside because of very dry weather","A small earthquake that occurred on a remote island in the Pacific Ocean","A severe typhoon that displaced over 50,000 people in South China","A landslide that occurred in rural Lantau"],answer:2,explain:"Affects many people."},
     {unit:"Unit 1",q:"Which of the following is a geological hazard?",options:["Plague of locusts","Volcanic eruption","Typhoon","Flood"],answer:1,explain:"Volcanic eruption is geological."},
     {unit:"Unit 1",q:"What is the cause of biological hazards?",options:["Geological process","Earth movement","Extreme climate","Living organism"],answer:3,explain:"From living organisms."}
   ],
-  // Unit 2
   [
     {unit:"Unit 2",q:"Which of the following matches about the relief characteristics of places in Hong Kong are correct?",table:`<table class="question-table"><tr><td></td><td>Place</td><td>Characteristic</td></tr><tr><td>1</td><td>Tseung Kwan O</td><td>Lowland</td></tr><tr><td>2</td><td>Yuen Long</td><td>Hilly</td></tr><tr><td>3</td><td>Sai Kung</td><td>Plenty of offshore islands</td></tr></table>`,options:["1 and 2 only","1 and 3 only","2 and 3 only","1, 2 and 3"],answer:1,explain:"Yuen Long is lowland."},
     {unit:"Unit 2",q:"Which of the following are ways to show relief on maps?",s:["1 Colouring","2 Contouring","3 Vertical exaggeration"],options:["1 and 2 only","1 and 3 only","2 and 3 only","1, 2 and 3"],answer:0,explain:"Vertical exaggeration for cross-section only."},
-    {unit:"Unit 2",q:"Refer to the contour map below. What is the vertical interval of the contour map?",img:"images/img1.jpeg",options:["10 m","20 m","50 m","100 m"],answer:2,explain:"VI = 50 m"},
-    {unit:"Unit 2",q:"Refer to the map and cross-section below. What is the vertical exaggeration of P–Q?",img:"images/img2.jpeg",img2:"images/img3.jpeg",options:["1 time","2 times","5 times","10 times"],answer:3,explain:"VE = 10"},
-    {unit:"Unit 2",q:"Refer to the map below. Which shows the cross-section of X–Y?",img:"images/img4.jpeg",options:["A","B","C","D"],optImg:["images/opt2-1.jpeg","images/opt2-2.jpeg","images/opt2-3.jpeg","images/opt2-4.jpeg"],answer:2,explain:"C is correct"},
+    {unit:"Unit 2",q:"Refer to the contour map below. What is the vertical interval of the contour map?",img:"./images/img1.jpeg",options:["10 m","20 m","50 m","100 m"],answer:2,explain:"VI = 50 m"},
+    {unit:"Unit 2",q:"Refer to the map and cross-section below. What is the vertical exaggeration of P–Q?",img:"./images/img2.jpeg",options:["1 time","2 times","5 times","10 times"],answer:3,explain:"VE = 10"},
+    {unit:"Unit 2",q:"Refer to the map below. Which shows the cross-section of X–Y?",img:"./images/img4.jpeg",options:["A","B","C","D"],optImg:["./images/opt2-1.jpeg","./images/opt2-2.jpeg","./images/opt2-3.jpeg","./images/opt2-4.jpeg"],answer:2,explain:"C is correct"},
     {unit:"Unit 2",q:"Which gradient is the steepest?",options:["1 in 10","1 in 16","1 in 25","1 in 50"],answer:0,explain:"Smaller = steeper"},
-    {unit:"Unit 2",q:"Refer to the map below. What is the gradient of Slope Y?",img:"images/img5.jpeg",options:["1 in 1.6","1 in 2.5","1 in 4","1 in 10"],answer:0,explain:"1/1.6"},
-    {unit:"Unit 2",q:"Refer to the map below. What is Relief X?",img:"images/img6.jpeg",options:["A valley","A ridge","A cliff","A concave slope"],answer:2,explain:"Cliff"},
-    {unit:"Unit 2",q:"Refer to the map below. What is Relief X?",img:"images/img7.jpeg",options:["A cliff","A valley","A spur","A hill"],answer:1,explain:"Valley"},
-    {unit:"Unit 2",q:"Refer to the map below. What are X and Y?",img:"images/img8.jpeg",options:["Concave slope|Valley","Valley|Convex slope","Spur|Concave slope","Convex slope|Spur"],answer:1,explain:"Valley + Convex slope"},
+    {unit:"Unit 2",q:"Refer to the map below. What is the gradient of Slope Y?",img:"./images/img5.jpeg",options:["1 in 1.6","1 in 2.5","1 in 4","1 in 10"],answer:0,explain:"1/1.6"},
+    {unit:"Unit 2",q:"Refer to the map below. What is Relief X?",img:"./images/img6.jpeg",options:["A valley","A ridge","A cliff","A concave slope"],answer:2,explain:"Cliff"},
+    {unit:"Unit 2",q:"Refer to the map below. What is Relief X?",img:"./images/img7.jpeg",options:["A cliff","A valley","A spur","A hill"],answer:1,explain:"Valley"},
+    {unit:"Unit 2",q:"Refer to the map below. What are X and Y?",img:"./images/img8.jpeg",options:["Concave slope|Valley","Valley|Convex slope","Spur|Concave slope","Convex slope|Spur"],answer:1,explain:"Valley + Convex slope"},
     {unit:"Unit 2",q:"Which is the highest peak in Hong Kong?",options:["Lantau Peak","Lion Rock","Sunset Peak","Tai Mo Shan"],answer:3,explain:"Tai Mo Shan"},
-    {unit:"Unit 2",q:"The photo shows relief in Hong Kong. Which is correct?",img:"images/img9.jpeg",options:["The relief is rugged.","It shows a plateau.","It shows a plain.","Most land is this type."],answer:2,explain:"Plain"}
+    {unit:"Unit 2",q:"The photo shows relief in Hong Kong. Which is correct?",img:"./images/img9.jpeg",options:["The relief is rugged.","It shows a plateau.","It shows a plain.","Most land is this type."],answer:2,explain:"Plain"}
   ],
-  // Unit 3
   [
-    {unit:"Unit 3",q:"Refer to the photo. Which is correct about the hazard?",s:["1 It occurs on a man-made slope.","2 It blocks the road and disrupts traffic.","3 Resisting force > driving force."],img:"images/img10.jpeg",options:["2 only","1 and 2 only","1 and 3 only","2 and 3 only"],answer:0,explain:"Only 2 is correct"},
+    {unit:"Unit 3",q:"Refer to the photo. Which is correct about the hazard?",s:["1 It occurs on a man-made slope.","2 It blocks the road and disrupts traffic.","3 Resisting force > driving force."],img:"./images/img10.jpeg",options:["2 only","1 and 2 only","1 and 3 only","2 and 3 only"],answer:0,explain:"Only 2 is correct"},
     {unit:"Unit 3",q:"Why does heavy rain cause landslides?",s:["1 Cohesion of soil grains increases","2 Weight of the slope increases","3 Friction between soil grains decreases"],options:["2 only","1 and 2 only","1 and 3 only","2 and 3 only"],answer:3,explain:"Weight increases, friction decreases"},
     {unit:"Unit 3",q:"Measures for natural terrain landslides:",s:["1 Cover slope with shotcrete","2 Install flexible barriers","3 Build check dam"],options:["1 and 2 only","1 and 3 only","2 and 3 only","1,2,3"],answer:2,explain:"Shotcrete is for man-made slopes"},
     {unit:"Unit 3",q:"________ prevents sliding. Affected by cohesion & friction.",options:["Resisting force","Driving force","Rainwater","Gravity"],answer:0,explain:"Resisting force"},
-    {unit:"Unit 3",q:"Which shows the correct relationship between gradient and landslide risk?",options:["A","B","C","D"],optImg:["images/opt3-1.jpeg","images/opt3-2.jpeg","images/opt3-3.jpeg","images/opt3-4.jpeg"],answer:3,explain:"Steeper = higher risk"},
+    {unit:"Unit 3",q:"Which shows the correct relationship between gradient and landslide risk?",options:["A","B","C","D"],optImg:["./images/opt3-1.jpeg","./images/opt3-2.jpeg","./images/opt3-3.jpeg","./images/opt3-4.jpeg"],answer:3,explain:"Steeper = higher risk"},
     {unit:"Unit 3",q:"Which slope has the highest risk?",table:`<table><tr><td></td><td>Vertical</td><td>Horizontal</td></tr><tr><td>A</td><td>175 m</td><td>450 m</td></tr><tr><td>B</td><td>200 m</td><td>210 m</td></tr><tr><td>C</td><td>250 m</td><td>700 m</td></tr><tr><td>D</td><td>300 m</td><td>1200 m</td></tr></table>`,options:["A","B","C","D"],answer:1,explain:"Steepest"},
-    {unit:"Unit 3",q:"Which place has the highest landslide risk?",img:"images/img11.jpeg",options:["P","Q","R","S"],answer:2,explain:"R is steepest"},
+    {unit:"Unit 3",q:"Which place has the highest landslide risk?",img:"./images/img11.jpeg",options:["P","Q","R","S"],answer:2,explain:"R is steepest"},
     {unit:"Unit 3",q:"Which slope has the greatest risk?",table:`<table><tr><td></td><td>Gradient</td><td>Weathering</td><td>Rainfall</td></tr><tr><td>A</td><td>1 in 3</td><td>High</td><td>2200 mm</td></tr><tr><td>B</td><td>1 in 5</td><td>Low</td><td>500 mm</td></tr><tr><td>C</td><td>1 in 10</td><td>High</td><td>200 mm</td></tr><tr><td>D</td><td>1 in 20</td><td>Low</td><td>200 mm</td></tr></table>`,options:["A","B","C","D"],answer:0,explain:"Steep + weathered + heavy rain"},
     {unit:"Unit 3",q:"Which increase driving force?",s:["1 Steepening slopes","2 Cutting slopes","3 Heavy rainfall"],options:["1 only","1 and 2 only","2 and 3 only","1,2,3"],answer:3,explain:"All increase driving force"},
     {unit:"Unit 3",q:"Which human activities may cause landslides?",s:["1 Remove all vegetation","2 Build retaining walls","3 Build roads"],options:["1 and 2 only","1 and 3 only","2 and 3 only","1,2,3"],answer:1,explain:"Walls prevent landslides"},
     {unit:"Unit 3",q:"Which increase resisting force?",s:["1 Soil nails","2 Gabion walls","3 Flexible barriers"],options:["1 and 2 only","1 and 3 only","2 and 3 only","1,2,3"],answer:0,explain:"Barriers stop debris only"},
     {unit:"Unit 3",q:"HKSAR measure to prevent landslides:",options:["Warning systems","Ban development","Strengthen & monitor slopes","Clear vegetation"],answer:2,explain:"Monitor and strengthen"},
-    {unit:"Unit 3",q:"This warning is usually issued in:",img:"images/img12.jpeg",options:["spring","summer","autumn","winter"],answer:1,explain:"Summer"},
-    {unit:"Unit 3",q:"How to protect yourself when this warning is issued?",s:["1 Avoid walking near steep slopes","2 Avoid driving in hilly areas","3 Stay at home"],img:"images/img12.jpeg",options:["1 and 2 only","1 and 3 only","2 and 3 only","1,2,3"],answer:3,explain:"All correct"},
-    {unit:"Unit 3",q:"Where is this sign most likely found?",img:"images/img13.jpeg",options:["1:50 slope","Tai Mo Shan peak","Man-made slope","Flat land"],answer:2,explain:"Man-made slope"}
+    {unit:"Unit 3",q:"This warning is usually issued in:",img:"./images/img12.jpeg",options:["spring","summer","autumn","winter"],answer:1,explain:"Summer"},
+    {unit:"Unit 3",q:"How to protect yourself when this warning is issued?",s:["1 Avoid walking near steep slopes","2 Avoid driving in hilly areas","3 Stay at home"],img:"./images/img12.jpeg",options:["1 and 2 only","1 and 3 only","2 and 3 only","1,2,3"],answer:3,explain:"All correct"},
+    {unit:"Unit 3",q:"Where is this sign most likely found?",img:"./images/img13.jpeg",options:["1:50 slope","Tai Mo Shan peak","Man-made slope","Flat land"],answer:2,explain:"Man-made slope"}
   ],
-  // Unit 4
   [
     {unit:"Unit 4",q:"Which about typhoons is correct?",s:["1 Inland areas experience stronger typhoons than coastal areas","2 Tropical regions are more likely affected","3 Form over water >26.5°C"],options:["3 only","1 and 2 only","1 and 3 only","2 and 3 only"],answer:3,explain:"Coastal > inland"},
     {unit:"Unit 4",q:"Measures to reduce typhoon property damage:",s:["1 Better monitoring & warning","2 Typhoon-proof buildings","3 Open shelters"],options:["1 and 2 only","1 and 3 only","2 and 3 only","1,2,3"],answer:0,explain:"Shelters protect people"},
     {unit:"Unit 4",q:"Unit of air pressure:",options:["m/s","hPa","mm","%"],answer:1,explain:"hPa"},
     {unit:"Unit 4",q:"Unit of precipitation:",options:["hPa","mm","%","°C"],answer:1,explain:"mm"},
-    {unit:"Unit 4",q:"Which shows Hong Kong’s climate graph?",options:["A","B","C","D"],optImg:["images/opt4-1.jpeg","images/opt4-2.jpeg","images/opt4-3.jpeg","images/opt4-4.jpeg"],answer:3,explain:"D matches HK"},
+    {unit:"Unit 4",q:"Which shows Hong Kong’s climate graph?",options:["A","B","C","D"],optImg:["./images/opt4-1.jpeg","./images/opt4-2.jpeg","./images/opt4-3.jpeg","./images/opt4-4.jpeg"],answer:3,explain:"D matches HK"},
     {unit:"Unit 4",q:"Winter characteristics in Hong Kong:",s:["1 Air pressure is usually high","2 Northeast offshore winds","3 More humid than summer"],options:["2 only","1 and 2 only","1 and 3 only","1,2,3"],answer:1,explain:"Winter is dry"},
     {unit:"Unit 4",q:"Spring climate in Hong Kong:",s:["1 Fog is common","2 High relative humidity","3 Mean temp below 10°C"],options:["1 and 2 only","1 and 3 only","2 and 3 only","1,2,3"],answer:0,explain:"Temp above 10°C"},
     {unit:"Unit 4",q:"Which about HK climate is correct?",options:["Annual rainfall is high","Not affected by monsoons","Offshore winds in summer","Low pressure in winter"],answer:0,explain:"High rainfall"},
-    {unit:"Unit 4",q:"Refer to Place P. Which is correct?",img:"images/img14.jpeg",s:["1 No winter","2 January is summer","3 Annual temp range >10°C"],options:["1 and 2 only","1 and 3 only","2 and 3 only","1,2,3"],answer:2,explain:"Southern hemisphere"},
-    {unit:"Unit 4",q:"When does flooding most likely occur in Place R?",img:"images/img15.jpeg",options:["Nov–Mar","Apr–May","Jun–Aug","Sep–Oct"],answer:0,explain:"Rainy season"},
-    {unit:"Unit 4",q:"Which shows correct monsoon directions in HK?",options:["A","B","C","D"],optImg:["images/opt4-5.jpeg","images/opt4-6.jpeg","images/opt4-7.jpeg","images/opt4-8.jpeg"],answer:1,explain:"Summer SW, Winter NE"},
-    {unit:"Unit 4",q:"Which shows summer monsoon direction in HK?",options:["A","B","C","D"],optImg:["images/opt4-9.jpeg","images/opt4-10.jpeg","images/opt4-11.jpeg","images/opt4-12.jpeg"],answer:0,explain:"From southwest"},
+    {unit:"Unit 4",q:"Refer to Place P. Which is correct?",img:"./images/img14.jpeg",s:["1 No winter","2 January is summer","3 Annual temp range >10°C"],options:["1 and 2 only","1 and 3 only","2 and 3 only","1,2,3"],answer:2,explain:"Southern hemisphere"},
+    {unit:"Unit 4",q:"When does flooding most likely occur in Place R?",img:"./images/img15.jpeg",options:["Nov–Mar","Apr–May","Jun–Aug","Sep–Oct"],answer:0,explain:"Rainy season"},
+    {unit:"Unit 4",q:"Which shows correct monsoon directions in HK?",options:["A","B","C","D"],optImg:["./images/opt4-5.jpeg","./images/opt4-6.jpeg","./images/opt4-7.jpeg","./images/opt4-8.jpeg"],answer:1,explain:"Summer SW, Winter NE"},
+    {unit:"Unit 4",q:"Which shows summer monsoon direction in HK?",options:["A","B","C","D"],optImg:["./images/opt4-9.jpeg","./images/opt4-10.jpeg","./images/opt4-11.jpeg","./images/opt4-12.jpeg"],answer:0,explain:"From southwest"},
     {unit:"Unit 4",q:"Which are extreme weather in HK?",s:["1 Snowstorms","2 Rainstorms","3 Typhoons"],options:["3 only","1 and 2 only","1 and 3 only","2 and 3 only"],answer:3,explain:"No snow"},
     {unit:"Unit 4",q:"Which about typhoons is correct?",s:["1 It is a strong tropical storm","2 Associated with storm surge","3 Strong winds only in the eye"],options:["1 only","2 only","1 and 2 only","1 and 3 only"],answer:2,explain:"Eye is calm"},
-    {unit:"Unit 4",q:"The wind speed is:",img:"images/img16.png",options:["2.5 m/s","7.5 m/s","12.5 m/s","17.5 m/s"],answer:2,explain:"12.5"},
-    {unit:"Unit 4",q:"Weather conditions in Hong Kong:",s:["1 There is fog","2 Temperature is 29°C","3 Wind from southwest"],img:"images/img17.jpeg",options:["1 and 2 only","1 and 3 only","2 and 3 only","1,2,3"],answer:2,explain:"No fog"},
-    {unit:"Unit 4",q:"Weather conditions in Hong Kong:",s:["1 Air pressure 1008 hPa","2 Wind speed 5 m/s","3 Thunderstorm"],img:"images/img17.jpeg",options:["1 and 2 only","1 and 3 only","2 and 3 only","1,2,3"],answer:1,explain:"Wind speed not 5"},
-    {unit:"Unit 4",q:"Weather conditions in Hong Kong:",s:["1 Drizzle","2 Wind speed 7.5 m/s","3 Pressure ~1020 hPa"],img:"images/img18.jpeg",options:["1 and 2 only","1 and 3 only","2 and 3 only","1,2,3"],answer:2,explain:"No drizzle"},
-    {unit:"Unit 4",q:"About pressure system X:",s:["1 Common in winter","2 Low pressure system","3 Brings heavy rain"],img:"images/img19.jpeg",options:["1 and 2 only","1 and 3 only","2 and 3 only","1,2,3"],answer:2,explain:"Low pressure in summer"},
-    {unit:"Unit 4",q:"Actions when this signal is issued:",s:["1 Avoid all outdoor activities","2 Stay safe and monitor news","3 Move valuables from windows"],img:"images/img20.jpeg",options:["1 and 2 only","1 and 3 only","2 and 3 only","1,2,3"],answer:3,explain:"All correct"}
+    {unit:"Unit 4",q:"The wind speed is:",img:"./images/img16.png",options:["2.5 m/s","7.5 m/s","12.5 m/s","17.5 m/s"],answer:2,explain:"12.5"},
+    {unit:"Unit 4",q:"Weather conditions in Hong Kong:",s:["1 There is fog","2 Temperature is 29°C","3 Wind from southwest"],img:"./images/img17.jpeg",options:["1 and 2 only","1 and 3 only","2 and 3 only","1,2,3"],answer:2,explain:"No fog"},
+    {unit:"Unit 4",q:"Weather conditions in Hong Kong:",s:["1 Air pressure 1008 hPa","2 Wind speed 5 m/s","3 Thunderstorm"],img:"./images/img17.jpeg",options:["1 and 2 only","1 and 3 only","2 and 3 only","1,2,3"],answer:1,explain:"Wind speed not 5"},
+    {unit:"Unit 4",q:"Weather conditions in Hong Kong:",s:["1 Drizzle","2 Wind speed 7.5 m/s","3 Pressure ~1020 hPa"],img:"./images/img18.jpeg",options:["1 and 2 only","1 and 3 only","2 and 3 only","1,2,3"],answer:2,explain:"No drizzle"},
+    {unit:"Unit 4",q:"About pressure system X:",s:["1 Common in winter","2 Low pressure system","3 Brings heavy rain"],img:"./images/img19.jpeg",options:["1 and 2 only","1 and 3 only","2 and 3 only","1,2,3"],answer:2,explain:"Low pressure in summer"},
+    {unit:"Unit 4",q:"Actions when this signal is issued:",s:["1 Avoid all outdoor activities","2 Stay safe and monitor news","3 Move valuables from windows"],img:"./images/img20.jpeg",options:["1 and 2 only","1 and 3 only","2 and 3 only","1,2,3"],answer:3,explain:"All correct"}
   ],
-  // Unit 5
   [
     {unit:"Unit 5",q:"Indirect effects of earthquake:",s:["1 Landslides triggered","2 Floods from dam collapse","3 Spread of disease"],options:["1 and 2 only","1 and 3 only","2 and 3 only","1,2,3"],answer:2,explain:"Landslide is secondary"},
     {unit:"Unit 5",q:"Least likely to have serious earthquakes:",options:["New Zealand","Australia","Chile","Japan"],answer:1,explain:"Not on plate boundary"},
-    {unit:"Unit 5",q:"Earthquake damage. Which is correct?",s:["1 Quake-proof design helps","2 Direct effect","3 Triggers other direct effects"],img:"images/img21.jpeg",options:["1 and 2 only","1 and 3 only","2 and 3 only","1,2,3"],answer:0,explain:"Direct damage"},
-    {unit:"Unit 5",q:"Which matches Earth’s structure?",img:"images/img22.jpeg",options:["Crust|Mantle|Core","Crust|Core|Mantle","Mantle|Core|Crust","Core|Mantle|Crust"],answer:0,explain:"1=Crust,2=Mantle,3=Core"},
-    {unit:"Unit 5",q:"About Layer X:",s:["1 High temperature","2 Upper part solid","3 Highest density"],img:"images/img23.jpeg",options:["1 only","1 and 2 only","1 and 3 only","2 and 3 only"],answer:1,explain:"Core is densest"},
+    {unit:"Unit 5",q:"Earthquake damage. Which is correct?",s:["1 Quake-proof design helps","2 Direct effect","3 Triggers other direct effects"],img:"./images/img21.jpeg",options:["1 and 2 only","1 and 3 only","2 and 3 only","1,2,3"],answer:0,explain:"Direct damage"},
+    {unit:"Unit 5",q:"Which matches Earth’s structure?",img:"./images/img22.jpeg",options:["Crust|Mantle|Core","Crust|Core|Mantle","Mantle|Core|Crust","Core|Mantle|Crust"],answer:0,explain:"1=Crust,2=Mantle,3=Core"},
+    {unit:"Unit 5",q:"About Layer X:",s:["1 High temperature","2 Upper part solid","3 Highest density"],img:"./images/img23.jpeg",options:["1 only","1 and 2 only","1 and 3 only","2 and 3 only"],answer:1,explain:"Core is densest"},
     {unit:"Unit 5",q:"Which about Earth structure is correct?",s:["1 Core is outermost","2 Crust forms land & sea floor","3 Crust + upper mantle = lithosphere"],options:["2 only","1 and 2 only","1 and 3 only","2 and 3 only"],answer:3,explain:"Core is inner"},
-    {unit:"Unit 5",q:"Correct labels of plates X,Y,Z:",img:"images/img24.jpeg",options:["Eurasian|Indo-Australian|Pacific","Eurasian|Pacific|Indo-Australian","Indo-Australian|Eurasian|Pacific","Pacific|Indo-Australian|Eurasian"],answer:0,explain:"Standard plate names"},
-    {unit:"Unit 5",q:"Which location suffers greatest loss?",img:"images/img25.jpeg",options:["1","2","3","4"],answer:2,explain:"Nearest epicenter"},
-    {unit:"Unit 5",q:"Plate boundary hazards:",s:["1 X: Volcanic eruption","2 Y: Typhoon","3 Z: Earthquake"],img:"images/img26.jpeg",options:["1 and 2 only","1 and 3 only","2 and 3 only","1,2,3"],answer:2,explain:"X not a boundary"},
-    {unit:"Unit 5",q:"Highest earthquake risk?",img:"images/img27.jpeg",options:["W","X","Y","Z"],answer:1,explain:"On plate boundary"}
+    {unit:"Unit 5",q:"Correct labels of plates X,Y,Z:",img:"./images/img24.jpeg",options:["Eurasian|Indo-Australian|Pacific","Eurasian|Pacific|Indo-Australian","Indo-Australian|Eurasian|Pacific","Pacific|Indo-Australian|Eurasian"],answer:0,explain:"Standard plate names"},
+    {unit:"Unit 5",q:"Which location suffers greatest loss?",img:"./images/img25.jpeg",options:["1","2","3","4"],answer:2,explain:"Nearest epicenter"},
+    {unit:"Unit 5",q:"Plate boundary hazards:",s:["1 X: Volcanic eruption","2 Y: Typhoon","3 Z: Earthquake"],img:"./images/img26.jpeg",options:["1 and 2 only","1 and 3 only","2 and 3 only","1,2,3"],answer:2,explain:"X not a boundary"},
+    {unit:"Unit 5",q:"Highest earthquake risk?",img:"./images/img27.jpeg",options:["W","X","Y","Z"],answer:1,explain:"On plate boundary"}
   ]
 ];
 
@@ -191,6 +186,7 @@ function render() {
     optBox.appendChild(d);
   });
   document.getElementById("answerBox").style.display = "none";
+  document.getElementById("prevBtn").disabled = currentQ === 0;
 }
 
 function check(i) {
