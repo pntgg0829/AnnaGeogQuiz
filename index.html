@@ -45,6 +45,7 @@ body{background:#f4f6f8;padding:20px;max-width:900px;margin:0 auto}
   <div id="sentences"></div>
   <div id="qTable"></div>
   <img id="quizImg" class="quiz-img" style="display:none;">
+  <img id="quizImg2" class="quiz-img" style="display:none;">
   <div id="options"></div>
   <div class="answer-box" id="answerBox" style="display:none;"></div>
   <div class="btn-group">
@@ -66,7 +67,7 @@ const unitData = [
     {unit:"Unit 2",q:"Which of the following matches about the relief characteristics of places in Hong Kong are correct?",table:`<table class="question-table"><tr><td></td><td>Place</td><td>Characteristic</td></tr><tr><td>1</td><td>Tseung Kwan O</td><td>Lowland</td></tr><tr><td>2</td><td>Yuen Long</td><td>Hilly</td></tr><tr><td>3</td><td>Sai Kung</td><td>Plenty of offshore islands</td></tr></table>`,options:["1 and 2 only","1 and 3 only","2 and 3 only","1, 2 and 3"],answer:1,explain:"Yuen Long is lowland."},
     {unit:"Unit 2",q:"Which of the following are ways to show relief on maps?",s:["1 Colouring","2 Contouring","3 Vertical exaggeration"],options:["1 and 2 only","1 and 3 only","2 and 3 only","1, 2 and 3"],answer:0,explain:"Vertical exaggeration for cross-section only."},
     {unit:"Unit 2",q:"Refer to the contour map below. What is the vertical interval of the contour map?",img:"./images/img1.jpeg",options:["10 m","20 m","50 m","100 m"],answer:2,explain:"VI = 50 m"},
-    {unit:"Unit 2",q:"Refer to the map and cross-section below. What is the vertical exaggeration of P–Q?",img:"./images/img2.jpeg",options:["1 time","2 times","5 times","10 times"],answer:3,explain:"VE = 10"},
+    {unit:"Unit 2",q:"Refer to the map and cross-section below. What is the vertical exaggeration of P–Q?",img:"./images/img2.jpeg",img2:"./images/img3.jpeg",options:["1 time","2 times","5 times","10 times"],answer:3,explain:"VE = 10"},
     {unit:"Unit 2",q:"Refer to the map below. Which shows the cross-section of X–Y?",img:"./images/img4.jpeg",options:["A","B","C","D"],optImg:["./images/opt2-1.jpeg","./images/opt2-2.jpeg","./images/opt2-3.jpeg","./images/opt2-4.jpeg"],answer:2,explain:"C is correct"},
     {unit:"Unit 2",q:"Which gradient is the steepest?",options:["1 in 10","1 in 16","1 in 25","1 in 50"],answer:0,explain:"Smaller = steeper"},
     {unit:"Unit 2",q:"Refer to the map below. What is the gradient of Slope Y?",img:"./images/img5.jpeg",options:["1 in 1.6","1 in 2.5","1 in 4","1 in 10"],answer:0,explain:"1/1.6"},
@@ -133,6 +134,7 @@ let currentUnit = -1;
 let currentQ = 0;
 let score = 0;
 const imgEl = document.getElementById("quizImg");
+const imgEl2 = document.getElementById("quizImg2");
 const qTable = document.getElementById("qTable");
 const sentenceEl = document.getElementById("sentences");
 
@@ -149,6 +151,8 @@ function render() {
     document.getElementById("scoreResult").innerHTML = `<div class="score-box">Unit ${currentUnit+1} Score: ${score} / ${qs.length}</div>`;
     document.getElementById("question").innerText = "Unit Completed!";
     document.getElementById("options").innerHTML = ""; sentenceEl.innerHTML = "";
+    imgEl.style.display = "none";
+    imgEl2.style.display = "none";
     return;
   }
   const q = qs[currentQ];
@@ -169,6 +173,8 @@ function render() {
   qTable.innerHTML = q.table || "";
   imgEl.style.display = q.img ? "block" : "none";
   if (q.img) imgEl.src = q.img;
+  imgEl2.style.display = q.img2 ? "block" : "none";
+  if (q.img2) imgEl2.src = q.img2;
 
   const optBox = document.getElementById("options");
   optBox.innerHTML = "";
